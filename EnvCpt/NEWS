@@ -1,0 +1,40 @@
+Version 1.1.1
+=============
+Changes to previous version
+
+* Fixed bug in envcpt function that meant that if a non-changepoint model was not specified in the list of models to fit, and no changepoints were detected in the changepoint model then the log-likelihood was recorded in the output as NA instead of the value fitted.
+
+Version 1.1
+===========
+Changes to previous version
+
+* Added option to envcpt to choose a subset of models to run.
+* The subset selection also follows through to plotting whereby only the models fitted are plotted.
+* BIC method added.
+* AICweights function added to calculate the AIC weights for the models fitted.
+* Removed dependency on forecast package in favour of directly using arima function from stats package. (slimming reverse dependencies)
+* Added new tests for the new functionality
+* Added EnvCpt paper to references
+
+Version 1.0
+=============
+Changes to previous version
+
+* Coding for cpt.reg has been implemented in C.
+* Changepoints in normal linear regression takes advantage of the Fortran dqrls command that is called with lm.fit. As such, potential multicollinearity is appropriately managed.
+* cpt.reg is available for any number of regressors.
+* The file LMregression.R is no longer used and so is removed.
+
+Version 0.1.1
+=============
+Changes to previous version
+
+* Did corrections for CRAN submission.
+* Corrected plot(.,type='aic') to do the correct axis drawing when yaxt is specified.
+* Added man page for the package.
+
+Version 0.1: Original
+
+Rebecca Killick
+Lancaster University
+www.lancs.ac.uk/~killick
